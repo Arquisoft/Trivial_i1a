@@ -5,10 +5,10 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>es.uniovi.asw</groupId>
-    <artifactId>Trivial1a</artifactId>
+    <artifactId>Trivial_i1a</artifactId>
     <packaging>pom</packaging>
     <version>1.0</version>
-    <name>Triviala</name>
+    <name>Trivia_ila</name>
 
     <modules>
         <module>extract</module>
