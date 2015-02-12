@@ -10,3 +10,4 @@ Software Architecture course - [University of Oviedo](http://www.uniovi.es), 201
 Autores:
 * labra
 * AinhoaLonPe
+* pradastur
