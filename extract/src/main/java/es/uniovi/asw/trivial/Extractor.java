@@ -5,6 +5,7 @@ public class Extractor {
 	public void usage() {
 		System.out.println("Wellcome to Trivial Extractor");
 	}
+	
 	public int run(String[] args) {
 		if (args.length == 0) {
 			usage();
@@ -13,7 +14,7 @@ public class Extractor {
 		return -1 ;
 	}
 	
-	//this is a comment Dani´s commit
+	//this is a comment Danis commit
 	public static void main(String[] args) {
         new Extractor().run(args);
     }	
