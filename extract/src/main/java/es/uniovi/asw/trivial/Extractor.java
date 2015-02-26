@@ -15,7 +15,6 @@ public class Extractor {
 	
 	//this is a comment Dani´s commit
 	public static void main(String[] args) {
-		
         new Extractor().run(args);
     }	
 }
