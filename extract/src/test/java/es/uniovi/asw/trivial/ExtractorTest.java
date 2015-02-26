@@ -12,7 +12,7 @@ public class ExtractorTest {
 	public void emptyExtractor() {
 		String args[] = {};
 		Extractor ext = new Extractor();
-	    assertThat(ext.run(args)).isEqualTo(0);
+	    assertThat(ext.run(args)).isEqualTo(1);
 	  }
 
 }
