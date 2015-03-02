@@ -10,14 +10,10 @@ import java.io.IOException;
 import es.uniovi.asw.quizStructure.Answer;
 import es.uniovi.asw.quizStructure.Question;
 
-
-
 public class ParserGIFT implements Parser{
 	
 	String InputFileName;
 	List<Question> questions = new ArrayList<Question>();
-	
- 	
 	
 	public ParserGIFT(String InputFileName)
 	{
@@ -37,7 +33,6 @@ public class ParserGIFT implements Parser{
 			try {
 				while (reader.ready())
 				{
-					
 					
 					String CurrentLine = reader.readLine();
 					 

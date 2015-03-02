@@ -7,8 +7,6 @@ public class Question {
 	public List<Answer> answers;
 	public String title;
 	
-	
-	
 	public Question(List<Answer> answers, String title) {
 		this.answers = answers;
 		this.title = title;

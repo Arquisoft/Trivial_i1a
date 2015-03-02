@@ -10,5 +10,4 @@ public class Answer
 		this.correctAnswer = correctAnswer;
 	}
 	
-	
 }
