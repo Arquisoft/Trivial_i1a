@@ -14,7 +14,6 @@ import es.uniovi.asw.quizStructure.Question;
 
 public class ParserGIFT implements Parser{
 	
-	@ObjectId
 	String InputFileName;
 	
 	@ObjectId
