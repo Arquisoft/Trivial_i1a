@@ -1,4 +1,4 @@
-package Connection;
+package es.uniovi.asw.connection;
 
 import java.net.UnknownHostException;
 
