@@ -19,11 +19,14 @@ public class ParserGIFT implements Parser{
 	
  	
 	
+
 	public ParserGIFT(String InputFileName)
 	{
 		this.InputFileName = InputFileName;
 	}
 	
+	
+	/////We have to convert this void method to a method that returns List<Question>
 	public void parse()
 	{
 		BufferedReader reader;
