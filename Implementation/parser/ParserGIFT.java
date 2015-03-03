@@ -27,15 +27,15 @@ public class ParserGIFT implements Parser{
 	
 	
 	/////We have to convert this void method to a method that returns List<Question>
-	public void parse()
+	public List<Answer> parse()
 	{
 		BufferedReader reader;
+		List<Answer> answers = new ArrayList<Answer>();
+		
 		try {
 			reader = new BufferedReader(new FileReader(InputFileName));
 			
 			String title = "";
-			
-			List<Answer> answers = new ArrayList<Answer>();
 			
 			try {
 				while (reader.ready())
@@ -83,6 +83,8 @@ public class ParserGIFT implements Parser{
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		}
+		
+		return answers;
 		
 			}
 	
