@@ -1,6 +1,10 @@
 package es.uniovi.asw.parser;
 
+import java.util.List;
+
+import es.uniovi.asw.quizStructure.Question;
+
 public interface Parser 
 {
-	public void parse();
+	public List<Question> parse();
 }

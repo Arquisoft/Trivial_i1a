@@ -29,6 +29,9 @@ public class ParserTest {
 
 		assertEquals(parse.questions.get(0).getAnswers().get(0).isCorrectAnswer(), list.get(0).isCorrectAnswer());
 		assertEquals(parse.questions.get(0).getAnswers().get(1).isCorrectAnswer(), list.get(1).isCorrectAnswer());
+		
+				
+		
 	}
 
 }

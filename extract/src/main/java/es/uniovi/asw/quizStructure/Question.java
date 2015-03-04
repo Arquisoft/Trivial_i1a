@@ -2,11 +2,11 @@ package es.uniovi.asw.quizStructure;
 
 import java.util.List;
 
-import org.mongojack.ObjectId;
+
 
 public class Question {
 
-	@ObjectId
+	//@ObjectId
 	public List<Answer> answers;
 	
 	public String title;

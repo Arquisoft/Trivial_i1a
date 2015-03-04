@@ -7,7 +7,6 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 
-import org.mongojack.ObjectId;
 
 import es.uniovi.asw.quizStructure.Answer;
 import es.uniovi.asw.quizStructure.Question;
@@ -16,7 +15,7 @@ public class ParserGIFT implements Parser{
 	
 	String InputFileName;
 	
-	@ObjectId
+	//@ObjectId
 	List<Question> questions = new ArrayList<Question>();
 	
 	public ParserGIFT(String InputFileName)
@@ -24,7 +23,7 @@ public class ParserGIFT implements Parser{
 		this.InputFileName = InputFileName;
 	}
 	
-	public void parse()
+	public List<Question> parse()
 	{
 		BufferedReader reader;
 		try {
@@ -79,6 +78,7 @@ public class ParserGIFT implements Parser{
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		}
+		return questions;
 		
 			}
 	

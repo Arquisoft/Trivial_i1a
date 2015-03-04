@@ -2,8 +2,6 @@ package es.uniovi.asw.connection;
 
 import java.net.UnknownHostException;
 
-import org.mongojack.JacksonDBCollection;
-
 import com.mongodb.BasicDBObject;
 import com.mongodb.DB;
 import com.mongodb.DBCollection;
