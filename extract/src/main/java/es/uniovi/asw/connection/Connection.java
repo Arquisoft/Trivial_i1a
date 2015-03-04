@@ -19,22 +19,6 @@ public class Connection {
 			DB db = (new MongoClient("localhost", 27017)).getDB("Questions");
 
 			DBCollection coll = db.getCollection("Questions");
-			
-			// Código de ejemplo de MongoJack, que es lo que se usa
-			// para convertir POJO (Plain Old Java Object) a JSON
-			// y almacenarlo en la base de datos.
-			
-			// JacksonDBCollection<Question, String> collection = JacksonDBCollection
-			//		.wrap(coll, Question.class, String.class);
-			// MyObject myObject = ...
-			// WriteResult<Question, String> result = coll.insert(myObject);
-			// String id = result.getSavedId();
-			// MyObject savedObject = coll.findOneById(id);
-			
-			// Hay que mirar como trabajar con MongoJack y conseguir convertir
-			// la lista de preguntas a JSON, para luego enviar a la DB.
-			
-			// Probablemente necesitemos un par de clases más.
 
 			BasicDBObject query = new BasicDBObject();
 			query.put("id", 1001);
