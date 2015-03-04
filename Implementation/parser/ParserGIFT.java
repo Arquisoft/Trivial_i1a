@@ -27,7 +27,7 @@ public class ParserGIFT implements Parser{
 	
 	
 	/////We have to convert this void method to a method that returns List<Question>
-	public List<Answer> parse()
+	public List<Qestion> parse()
 	{
 		BufferedReader reader;
 		List<Answer> answers = new ArrayList<Answer>();
@@ -84,7 +84,7 @@ public class ParserGIFT implements Parser{
 			e.printStackTrace();
 		}
 		
-		return answers;
+		return questions;
 		
 			}
 	
