@@ -38,6 +38,7 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
+    
 		<reporting>
 		<plugins>
 			<plugin>
@@ -93,9 +94,9 @@
 	<!--Members -->
 	<developers>
 		<developer>
-			<id>labra</id>
-			<name>Jose Emilio Labra</name>
-			<email>labra@uniovi.es</email>
+			<id>LabI1_a</id>
+			<name>Mario Pascual TOmás</name>
+			<email>uo229819@uniovi.es</email>
 			<organization>WESO-University of Oviedo</organization>
 			<organizationUrl>http://www.uniovi.es</organizationUrl>
 			<roles>
