@@ -14,7 +14,7 @@ public class ParserTest {
 
 	@Test
 	public void testParse() {
-		String file="Implementation/data/question.gift";
+		String file="data/question.gift";
 		List<Answer> list = new ArrayList<Answer>();
 		
 		list.add(new Answer("Hideaki Anno",true));
