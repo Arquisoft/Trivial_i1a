@@ -1,4 +1,4 @@
-package es.uniovi.asw.parser;
+package es.uniovi.asw.trivial;
 
 import static org.junit.Assert.*;
 
@@ -7,6 +7,7 @@ import java.util.List;
 
 import org.junit.Test;
 
+import es.uniovi.asw.parser.ParserGIFT;
 import es.uniovi.asw.quizStructure.Answer;
 
 public class ParserTest {

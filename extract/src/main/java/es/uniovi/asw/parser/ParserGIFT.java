@@ -16,7 +16,7 @@ public class ParserGIFT implements Parser{
 	String InputFileName;
 	
 	//@ObjectId
-	List<Question> questions = new ArrayList<Question>();
+	public List<Question> questions = new ArrayList<Question>();
 	
 	public ParserGIFT(String InputFileName)
 	{
