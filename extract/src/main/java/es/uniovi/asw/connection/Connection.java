@@ -26,8 +26,6 @@ public class Connection {
 			while (cursor.hasNext()) {
 				System.out.println(cursor.next());
 			}
-		} catch (UnknownHostException e) {
-			e.printStackTrace();
 		} catch (MongoException e) {
 			e.printStackTrace();
 		}
