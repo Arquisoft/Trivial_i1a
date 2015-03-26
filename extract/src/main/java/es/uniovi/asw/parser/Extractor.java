@@ -3,11 +3,9 @@ package es.uniovi.asw.parser;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.net.UnknownHostException;
 import java.util.List;
 
 import serializer.ParserBuilder;
@@ -19,7 +17,7 @@ import es.uniovi.asw.quizStructure.Question;
 
 public class Extractor {
 
-	public static void main(String[] args) throws UnknownHostException, FileNotFoundException {
+	public static void main(String[] args) throws IOException {
 		new Extractor().run(args);
 	}
 	
@@ -39,7 +37,7 @@ public class Extractor {
 		}
 	}
 
-	public int run(String[] args) throws UnknownHostException, FileNotFoundException {
+	public int run(String[] args) throws IOException {
 
 		System.out.println("Welcome to Trivial Extractor");
 

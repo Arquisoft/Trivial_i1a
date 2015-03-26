@@ -1,15 +1,11 @@
 package es.uniovi.asw.connection;
 
-import java.net.UnknownHostException;
-
 import com.mongodb.BasicDBObject;
 import com.mongodb.DB;
 import com.mongodb.DBCollection;
 import com.mongodb.DBCursor;
 import com.mongodb.MongoClient;
 import com.mongodb.MongoException;
-
-import es.uniovi.asw.quizStructure.Question;
 
 public class Connection {
 

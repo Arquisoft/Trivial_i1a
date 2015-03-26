@@ -25,9 +25,9 @@ public class ParserGIFT implements Parser{
 		this.InputFileName = InputFileName;
 	}
 	
-	public List<Question> parse()
+	public List<Question> parse() throws IOException
 	{
-		BufferedReader reader;
+		BufferedReader reader = null;
 		try {
 			reader = new BufferedReader(new FileReader(InputFileName));
 			
@@ -87,6 +87,7 @@ public class ParserGIFT implements Parser{
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		}
+		reader.close();
 		return questions;
 		
 			}

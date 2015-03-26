@@ -2,6 +2,7 @@ package es.uniovi.asw.trivial;
 
 import static org.junit.Assert.*;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -13,7 +14,7 @@ import es.uniovi.asw.quizStructure.Answer;
 public class ParserTest {
 
 	@Test
-	public void testParse() {
+	public void testParse() throws IOException {
 		String file="data/question.gift";
 		List<Answer> list = new ArrayList<Answer>();
 		
