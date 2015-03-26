@@ -17,6 +17,8 @@ public class ParserGIFT implements Parser{
 	
 	//@ObjectId
 	public List<Question> questions = new ArrayList<Question>();
+
+	
 	
 	public ParserGIFT(String InputFileName)
 	{
@@ -30,6 +32,7 @@ public class ParserGIFT implements Parser{
 			reader = new BufferedReader(new FileReader(InputFileName));
 			
 			String title = "";
+			String category = "";
 			
 			List<Answer> answers = new ArrayList<Answer>();
 			
@@ -57,6 +60,12 @@ public class ParserGIFT implements Parser{
 						title = CurrentLine.split("::")[1];
 					}
 					
+					// if it contains "!!" it's the title of the questioner.
+					else if(CurrentLine.contains("!!"))
+					{
+						category = CurrentLine.split("!!")[1];
+					}
+					
 					//if it contains "{" it's the start of the question section.
 					else if(CurrentLine.contains("{") && title.equals(null))
 					{
@@ -67,7 +76,7 @@ public class ParserGIFT implements Parser{
 					//if it contains "}" it's the end of the question section.
 					else if(CurrentLine.contains("}"))
 					{
-						questions.add(new Question(answers, title));
+						questions.add(new Question(answers, title, category));
 					}
 				}
 			} catch (IOException e) {
