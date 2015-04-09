@@ -32,7 +32,7 @@ public class ParserGIFT implements Parser{
 			reader = new BufferedReader(new FileReader(InputFileName));
 			
 			String title = "";
-			String category = "";
+			int category = -1;
 			
 			List<Answer> answers = new ArrayList<Answer>();
 			
@@ -63,7 +63,7 @@ public class ParserGIFT implements Parser{
 					// if it contains "!!" it's the title of the questioner.
 					else if(CurrentLine.contains("!!"))
 					{
-						category = CurrentLine.split("!!")[1];
+						category = Integer.parseInt(CurrentLine.split("!!")[1]);
 					}
 					
 					//if it contains "{" it's the start of the question section.

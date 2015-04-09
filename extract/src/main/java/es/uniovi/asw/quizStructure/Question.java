@@ -10,10 +10,18 @@ public class Question {
 	public List<Answer> answers;
 	
 	public String title;
+	public int category;
 	
-	public String category;
 	
-	public Question(List<Answer> answers, String title, String category) {
+	public int getCategory() {
+		return category;
+	}
+
+	public void setCategory(int category) {
+		this.category = category;
+	}
+
+	public Question(List<Answer> answers, String title, int category) {
 		this.answers = answers;
 		this.title = title;
 		this.category = category;
