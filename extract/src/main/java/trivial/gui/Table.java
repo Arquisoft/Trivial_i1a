@@ -1,25 +1,27 @@
 package trivial.gui;
 
-import java.awt.BorderLayout;
 import java.awt.EventQueue;
-
-import javax.swing.JFrame;
-import javax.swing.JPanel;
-import javax.swing.border.EmptyBorder;
-import javax.swing.JButton;
-
-import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Random;
 
-import javax.swing.JTextField;
+import javax.swing.JButton;
+import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
 import javax.swing.JToolBar;
+import javax.swing.border.EmptyBorder;
 
 import trivial.logic.Player;
+import java.awt.GridLayout;
+import java.awt.GridBagLayout;
+import javax.swing.BoxLayout;
+import java.awt.GridBagConstraints;
+import java.awt.Insets;
 
 public class Table extends JFrame {
 	
@@ -28,51 +30,6 @@ public class Table extends JFrame {
 	private ArrayList<Player> players = new ArrayList<Player>();
 	
 	private JPanel contentPane;
-	private JButton tilt1;
-	private JButton tilt2;
-	private JButton tilt3;
-	private JButton tilt4;
-	private JButton tilt5;
-	private JButton tilt6;
-	private JButton tilt7;
-	private JButton tilt8;
-	private JButton tilt9;
-	private JButton tilt10;
-	private JButton tilt11;
-	private JButton tilt12;
-	private JButton tilt13;
-	private JButton tilt14;
-	private JButton tilt15;
-	private JButton tilt16;
-	private JButton tilt17;
-	private JButton tilt18;
-	private JButton tilt19;
-	private JButton tilt20;
-	private JButton tilt21;
-	private JButton tilt22;
-	private JButton tilt23;
-	private JButton tilt24;
-	private JButton tilt25;
-	private JButton tilt26;
-	private JButton tilt27;
-	private JButton tilt28;
-	private JButton tilt29;
-	private JButton tilt30;
-	private JButton tilt31;
-	private JButton tilt32;
-	private JButton tiltV1;
-	private JButton tiltV2;
-	private JButton tiltC;
-	private JButton tiltV3;
-	private JButton tiltV4;
-	private JButton tiltH1;
-	private JButton tiltH2;
-	private JButton tiltH3;
-	private JButton tiltH4;
-	private JButton tiltH5;
-	private JButton tiltH6;
-	private JButton tiltH7;
-	private JButton tiltH8;
 	private JButton buttonDice;
 	private JTextField scoreTxt1;
 	private JTextField scoreTxt2;
@@ -84,6 +41,72 @@ public class Table extends JFrame {
 	private JLabel lblP4;
 	private JToolBar toolBar;
 	private JButton btnNewGame;
+	
+	private JButton[][] board;
+	private JPanel panel;
+	private JButton btnNewButton;
+	private JButton btnNewButton_1;
+	private JButton btnNewButton_2;
+	private JButton btnNewButton_3;
+	private JButton btnNewButton_4;
+	private JButton btnNewButton_5;
+	private JButton btnNewButton_6;
+	private JButton btnNewButton_7;
+	private JButton button;
+	private JButton button_1;
+	private JButton button_2;
+	private JButton button_3;
+	private JButton button_4;
+	private JButton button_5;
+	private JButton button_6;
+	private JButton button_7;
+	private JButton button_8;
+	private JButton button_9;
+	private JButton button_10;
+	private JButton btnNewButton_9;
+	private JButton button_12;
+	private JButton button_13;
+	private JButton btnNewButton_8;
+	private JButton button_15;
+	private JButton button_16;
+	private JButton button_17;
+	private JButton button_18;
+	private JButton button_19;
+	private JButton button_20;
+	private JButton button_21;
+	private JButton button_22;
+	private JButton button_23;
+	private JButton button_24;
+	private JButton button_25;
+	private JButton button_26;
+	private JButton button_27;
+	private JButton button_28;
+	private JButton button_29;
+	private JButton button_30;
+	private JButton button_31;
+	private JButton button_32;
+	private JButton button_33;
+	private JButton button_34;
+	private JButton button_35;
+	private JButton button_36;
+	private JButton button_37;
+	private JButton button_38;
+	private JButton button_39;
+	private JButton button_40;
+	private JButton button_41;
+	private JButton btnNewButton_10;
+	private JButton button_43;
+	private JButton button_44;
+	private JButton btnNewButton_11;
+	private JButton button_46;
+	private JButton button_47;
+	private JButton button_48;
+	private JButton button_49;
+	private JButton button_50;
+	private JButton button_51;
+	private JButton button_52;
+	private JButton button_53;
+	private JButton button_54;
 
 	/**
 	 * Launch the application.
@@ -114,51 +137,6 @@ public class Table extends JFrame {
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
-		contentPane.add(getTilt1());
-		contentPane.add(getTilt2());
-		contentPane.add(getTilt3());
-		contentPane.add(getTilt4());
-		contentPane.add(getTilt5());
-		contentPane.add(getTilt6());
-		contentPane.add(getTilt7());
-		contentPane.add(getTilt8());
-		contentPane.add(getTilt9());
-		contentPane.add(getTilt10());
-		contentPane.add(getTilt11());
-		contentPane.add(getTilt12());
-		contentPane.add(getTilt13());
-		contentPane.add(getTilt14());
-		contentPane.add(getTilt15());
-		contentPane.add(getTilt16());
-		contentPane.add(getTilt17());
-		contentPane.add(getTilt18());
-		contentPane.add(getTilt19());
-		contentPane.add(getTilt20());
-		contentPane.add(getTilt21());
-		contentPane.add(getTilt22());
-		contentPane.add(getTilt23());
-		contentPane.add(getTilt24());
-		contentPane.add(getTilt25());
-		contentPane.add(getTilt26());
-		contentPane.add(getTilt27());
-		contentPane.add(getTilt28());
-		contentPane.add(getTilt29());
-		contentPane.add(getTilt30());
-		contentPane.add(getTilt31());
-		contentPane.add(getTilt32());
-		contentPane.add(getTiltV1());
-		contentPane.add(getTiltV2());
-		contentPane.add(getTiltC());
-		contentPane.add(getTiltV3());
-		contentPane.add(getTiltV4());
-		contentPane.add(getTiltH1());
-		contentPane.add(getTiltH2());
-		contentPane.add(getTiltH3());
-		contentPane.add(getTiltH4());
-		contentPane.add(getTiltH5());
-		contentPane.add(getTiltH6());
-		contentPane.add(getTiltH7());
-		contentPane.add(getTiltH8());
 		contentPane.add(getButtonDice());
 		contentPane.add(getScoreTxt1());
 		contentPane.add(getScoreTxt2());
@@ -169,327 +147,9 @@ public class Table extends JFrame {
 		contentPane.add(getLblP3());
 		contentPane.add(getLblP4());
 		contentPane.add(getToolBar());
+		contentPane.add(getPanel());
 		
 		
-	}
-	private JButton getTilt1() {
-		if (tilt1 == null) {
-			tilt1 = new JButton("");
-			tilt1.setBounds(44, 47, 80, 80);
-		}
-		return tilt1;
-	}
-	private JButton getTilt2() {
-		if (tilt2 == null) {
-			tilt2 = new JButton("");
-			tilt2.setBounds(123, 47, 80, 80);
-		}
-		return tilt2;
-	}
-	private JButton getTilt3() {
-		if (tilt3 == null) {
-			tilt3 = new JButton("");
-			tilt3.setBounds(203, 47, 80, 80);
-		}
-		return tilt3;
-	}
-	private JButton getTilt4() {
-		if (tilt4 == null) {
-			tilt4 = new JButton("");
-			tilt4.setBounds(281, 47, 80, 80);
-		}
-		return tilt4;
-	}
-	private JButton getTilt5() {
-		if (tilt5 == null) {
-			tilt5 = new JButton("");
-			tilt5.setBounds(361, 47, 80, 80);
-		}
-		return tilt5;
-	}
-	private JButton getTilt6() {
-		if (tilt6 == null) {
-			tilt6 = new JButton("");
-			tilt6.setBounds(440, 47, 80, 80);
-		}
-		return tilt6;
-	}
-	private JButton getTilt7() {
-		if (tilt7 == null) {
-			tilt7 = new JButton("");
-			tilt7.setBounds(520, 47, 80, 80);
-		}
-		return tilt7;
-	}
-	private JButton getTilt8() {
-		if (tilt8 == null) {
-			tilt8 = new JButton("");
-			tilt8.addActionListener(new ActionListener() {
-				public void actionPerformed(ActionEvent arg0) {
-				}
-			});
-			tilt8.setBounds(598, 47, 80, 80);
-		}
-		return tilt8;
-	}
-	private JButton getTilt9() {
-		if (tilt9 == null) {
-			tilt9 = new JButton("");
-			tilt9.setBounds(678, 47, 80, 80);
-		}
-		return tilt9;
-	}
-	private JButton getTilt10() {
-		if (tilt10 == null) {
-			tilt10 = new JButton("");
-			tilt10.setBounds(758, 47, 80, 80);
-		}
-		return tilt10;
-	}
-	private JButton getTilt11() {
-		if (tilt11 == null) {
-			tilt11 = new JButton("");
-			tilt11.setBounds(837, 47, 80, 80);
-		}
-		return tilt11;
-	}
-	private JButton getTilt12() {
-		if (tilt12 == null) {
-			tilt12 = new JButton("");
-			tilt12.setBounds(837, 127, 80, 80);
-		}
-		return tilt12;
-	}
-	private JButton getTilt13() {
-		if (tilt13 == null) {
-			tilt13 = new JButton("");
-			tilt13.setBounds(837, 206, 80, 80);
-		}
-		return tilt13;
-	}
-	private JButton getTilt14() {
-		if (tilt14 == null) {
-			tilt14 = new JButton("");
-			tilt14.setBounds(837, 286, 80, 80);
-		}
-		return tilt14;
-	}
-	private JButton getTilt15() {
-		if (tilt15 == null) {
-			tilt15 = new JButton("");
-			tilt15.setBounds(837, 365, 80, 80);
-		}
-		return tilt15;
-	}
-	private JButton getTilt16() {
-		if (tilt16 == null) {
-			tilt16 = new JButton("");
-			tilt16.setBounds(837, 445, 80, 80);
-		}
-		return tilt16;
-	}
-	private JButton getTilt17() {
-		if (tilt17 == null) {
-			tilt17 = new JButton("");
-			tilt17.setBounds(837, 524, 80, 80);
-		}
-		return tilt17;
-	}
-	private JButton getTilt18() {
-		if (tilt18 == null) {
-			tilt18 = new JButton("");
-			tilt18.setBounds(758, 524, 80, 80);
-		}
-		return tilt18;
-	}
-	private JButton getTilt19() {
-		if (tilt19 == null) {
-			tilt19 = new JButton("");
-			tilt19.setBounds(678, 524, 80, 80);
-		}
-		return tilt19;
-	}
-	private JButton getTilt20() {
-		if (tilt20 == null) {
-			tilt20 = new JButton("");
-			tilt20.setBounds(598, 524, 80, 80);
-		}
-		return tilt20;
-	}
-	private JButton getTilt21() {
-		if (tilt21 == null) {
-			tilt21 = new JButton("");
-			tilt21.setBounds(520, 524, 80, 80);
-		}
-		return tilt21;
-	}
-	private JButton getTilt22() {
-		if (tilt22 == null) {
-			tilt22 = new JButton("");
-			tilt22.setBounds(440, 524, 80, 80);
-		}
-		return tilt22;
-	}
-	private JButton getTilt23() {
-		if (tilt23 == null) {
-			tilt23 = new JButton("");
-			tilt23.setBounds(361, 524, 80, 80);
-		}
-		return tilt23;
-	}
-	private JButton getTilt24() {
-		if (tilt24 == null) {
-			tilt24 = new JButton("");
-			tilt24.setBounds(281, 524, 80, 80);
-		}
-		return tilt24;
-	}
-	private JButton getTilt25() {
-		if (tilt25 == null) {
-			tilt25 = new JButton("");
-			tilt25.setBounds(203, 524, 80, 80);
-		}
-		return tilt25;
-	}
-	private JButton getTilt26() {
-		if (tilt26 == null) {
-			tilt26 = new JButton("");
-			tilt26.setBounds(123, 524, 80, 80);
-		}
-		return tilt26;
-	}
-	private JButton getTilt27() {
-		if (tilt27 == null) {
-			tilt27 = new JButton("");
-			tilt27.setBounds(44, 524, 80, 80);
-		}
-		return tilt27;
-	}
-	private JButton getTilt28() {
-		if (tilt28 == null) {
-			tilt28 = new JButton("");
-			tilt28.setBounds(44, 445, 80, 80);
-		}
-		return tilt28;
-	}
-	private JButton getTilt29() {
-		if (tilt29 == null) {
-			tilt29 = new JButton("");
-			tilt29.setBounds(44, 365, 80, 80);
-		}
-		return tilt29;
-	}
-	private JButton getTilt30() {
-		if (tilt30 == null) {
-			tilt30 = new JButton("");
-			tilt30.setBounds(44, 286, 80, 80);
-		}
-		return tilt30;
-	}
-	private JButton getTilt31() {
-		if (tilt31 == null) {
-			tilt31 = new JButton("");
-			tilt31.setBounds(44, 206, 80, 80);
-		}
-		return tilt31;
-	}
-	private JButton getTilt32() {
-		if (tilt32 == null) {
-			tilt32 = new JButton("");
-			tilt32.setBounds(44, 127, 80, 80);
-		}
-		return tilt32;
-	}
-	private JButton getTiltV1() {
-		if (tiltV1 == null) {
-			tiltV1 = new JButton("");
-			tiltV1.setBounds(440, 127, 80, 80);
-		}
-		return tiltV1;
-	}
-	private JButton getTiltV2() {
-		if (tiltV2 == null) {
-			tiltV2 = new JButton("");
-			tiltV2.setBounds(440, 206, 80, 80);
-		}
-		return tiltV2;
-	}
-	private JButton getTiltC() {
-		if (tiltC == null) {
-			tiltC = new JButton("");
-			tiltC.setBounds(440, 286, 80, 80);
-		}
-		return tiltC;
-	}
-	private JButton getTiltV3() {
-		if (tiltV3 == null) {
-			tiltV3 = new JButton("");
-			tiltV3.setBounds(440, 365, 80, 80);
-		}
-		return tiltV3;
-	}
-	private JButton getTiltV4() {
-		if (tiltV4 == null) {
-			tiltV4 = new JButton("");
-			tiltV4.setBounds(440, 445, 80, 80);
-		}
-		return tiltV4;
-	}
-	private JButton getTiltH1() {
-		if (tiltH1 == null) {
-			tiltH1 = new JButton("");
-			tiltH1.setBounds(123, 286, 80, 80);
-		}
-		return tiltH1;
-	}
-	private JButton getTiltH4() {
-		if (tiltH4 == null) {
-			tiltH4 = new JButton("");
-			tiltH4.setBounds(361, 286, 80, 80);
-		}
-		return tiltH4;
-	}
-	private JButton getTiltH3() {
-		if (tiltH3 == null) {
-			tiltH3 = new JButton("");
-			tiltH3.setBounds(281, 286, 80, 80);
-		}
-		return tiltH3;
-	}
-	private JButton getTiltH2() {
-		if (tiltH2 == null) {
-			tiltH2 = new JButton("");
-			tiltH2.setBounds(203, 286, 80, 80);
-		}
-		return tiltH2;
-	}
-	private JButton getTiltH5() {
-		if (tiltH5 == null) {
-			tiltH5 = new JButton("");
-			tiltH5.setBounds(520, 286, 80, 80);
-		}
-		return tiltH5;
-	}
-	private JButton getTiltH6() {
-		if (tiltH6 == null) {
-			tiltH6 = new JButton("");
-			tiltH6.setBounds(598, 286, 80, 80);
-		}
-		return tiltH6;
-	}
-	private JButton getTiltH7() {
-		if (tiltH7 == null) {
-			tiltH7 = new JButton("");
-			tiltH7.setBounds(678, 286, 80, 80);
-		}
-		return tiltH7;
-	}
-	private JButton getTiltH8() {
-		if (tiltH8 == null) {
-			tiltH8 = new JButton("");
-			tiltH8.setBounds(758, 286, 80, 80);
-		}
-		return tiltH8;
 	}
 	private JButton getButtonDice() {
 		if (buttonDice == null) {
@@ -592,5 +252,502 @@ public class Table extends JFrame {
 	private void goToTilt()
 	{
 		//Players.
+	}
+	private JPanel getPanel() {
+		if (panel == null) {
+			panel = new JPanel();
+			panel.setBounds(10, 49, 945, 621);
+			panel.setLayout(new GridLayout(7, 0, 0, 0));
+			panel.add(getBtnNewButton_2());
+			panel.add(getBtnNewButton_1());
+			panel.add(getBtnNewButton_3());
+			panel.add(getBtnNewButton_4());
+			panel.add(getBtnNewButton_5());
+			panel.add(getBtnNewButton_6());
+			panel.add(getButton());
+			panel.add(getBtnNewButton_7());
+			panel.add(getButton_1());
+			panel.add(getButton_41());
+			panel.add(getButton_39());
+			panel.add(getButton_44());
+			panel.add(getButton_43());
+			panel.add(getBtnNewButton_10());
+			panel.add(getButton_36());
+			panel.add(getButton_2());
+			panel.add(getBtnNewButton());
+			panel.add(getButton_4());
+			panel.add(getButton_3());
+			panel.add(getButton_48());
+			panel.add(getButton_47());
+			panel.add(getButton_46());
+			panel.add(getBtnNewButton_11());
+			panel.add(getButton_20());
+			panel.add(getButton_40());
+			panel.add(getButton_19());
+			panel.add(getButton_38());
+			panel.add(getButton_37());
+			panel.add(getButton_18());
+			panel.add(getButton_35());
+			panel.add(getButton_17());
+			panel.add(getButton_34());
+			panel.add(getButton_33());
+			panel.add(getButton_32());
+			panel.add(getButton_31());
+			panel.add(getButton_30());
+			panel.add(getButton_29());
+			panel.add(getButton_28());
+			panel.add(getButton_16());
+			panel.add(getButton_15());
+			panel.add(getBtnNewButton_8());
+			panel.add(getButton_7());
+			panel.add(getButton_6());
+			panel.add(getButton_5());
+			panel.add(getButton_10());
+			panel.add(getButton_9());
+			panel.add(getButton_8());
+			panel.add(getButton_13());
+			panel.add(getButton_12());
+			panel.add(getBtnNewButton_9());
+			panel.add(getButton_22());
+			panel.add(getButton_21());
+			panel.add(getButton_23());
+			panel.add(getButton_24());
+			panel.add(getButton_25());
+			panel.add(getButton_27());
+			panel.add(getButton_26());
+			panel.add(getButton_49());
+			panel.add(getButton_50());
+			panel.add(getButton_51());
+			panel.add(getButton_52());
+			panel.add(getButton_53());
+			panel.add(getButton_54());
+		}
+		return panel;
+	}
+	private JButton getBtnNewButton() {
+		if (btnNewButton == null) {
+			btnNewButton = new JButton("");
+			btnNewButton.setEnabled(false);
+			btnNewButton.setVisible(false);
+		}
+		return btnNewButton;
+	}
+	private JButton getBtnNewButton_1() {
+		if (btnNewButton_1 == null) {
+			btnNewButton_1 = new JButton("New button");
+		}
+		return btnNewButton_1;
+	}
+	private JButton getBtnNewButton_2() {
+		if (btnNewButton_2 == null) {
+			btnNewButton_2 = new JButton("0_0");
+		}
+		return btnNewButton_2;
+	}
+	private JButton getBtnNewButton_3() {
+		if (btnNewButton_3 == null) {
+			btnNewButton_3 = new JButton("New button");
+		}
+		return btnNewButton_3;
+	}
+	private JButton getBtnNewButton_4() {
+		if (btnNewButton_4 == null) {
+			btnNewButton_4 = new JButton("New button");
+		}
+		return btnNewButton_4;
+	}
+	private JButton getBtnNewButton_5() {
+		if (btnNewButton_5 == null) {
+			btnNewButton_5 = new JButton("New button");
+		}
+		return btnNewButton_5;
+	}
+	private JButton getBtnNewButton_6() {
+		if (btnNewButton_6 == null) {
+			btnNewButton_6 = new JButton("New button");
+		}
+		return btnNewButton_6;
+	}
+	private JButton getBtnNewButton_7() {
+		if (btnNewButton_7 == null) {
+			btnNewButton_7 = new JButton("New button");
+		}
+		return btnNewButton_7;
+	}
+	private JButton getButton() {
+		if (button == null) {
+			button = new JButton("New button");
+		}
+		return button;
+	}
+	private JButton getButton_1() {
+		if (button_1 == null) {
+			button_1 = new JButton("New button");
+		}
+		return button_1;
+	}
+	private JButton getButton_2() {
+		if (button_2 == null) {
+			button_2 = new JButton("");
+			button_2.setEnabled(false);
+			button_2.setVisible(false);
+		}
+		return button_2;
+	}
+	private JButton getButton_3() {
+		if (button_3 == null) {
+			button_3 = new JButton("New button");
+		}
+		return button_3;
+	}
+	private JButton getButton_4() {
+		if (button_4 == null) {
+			button_4 = new JButton("New button");
+		}
+		return button_4;
+	}
+	private JButton getButton_5() {
+		if (button_5 == null) {
+			button_5 = new JButton("");
+			button_5.setEnabled(false);
+			button_5.setVisible(false);
+		}
+		return button_5;
+	}
+	private JButton getButton_6() {
+		if (button_6 == null) {
+			button_6 = new JButton("");
+			button_6.setEnabled(false);
+			button_6.setVisible(false);
+		}
+		return button_6;
+	}
+	private JButton getButton_7() {
+		if (button_7 == null) {
+			button_7 = new JButton("");
+			button_7.setEnabled(false);
+			button_7.setVisible(false);
+		}
+		return button_7;
+	}
+	private JButton getButton_8() {
+		if (button_8 == null) {
+			button_8 = new JButton("");
+			button_8.setEnabled(false);
+			button_8.setVisible(false);
+		}
+		return button_8;
+	}
+	private JButton getButton_9() {
+		if (button_9 == null) {
+			button_9 = new JButton("New button");
+		}
+		return button_9;
+	}
+	private JButton getButton_10() {
+		if (button_10 == null) {
+			button_10 = new JButton("New button");
+		}
+		return button_10;
+	}
+	private JButton getBtnNewButton_9() {
+		if (btnNewButton_9 == null) {
+			btnNewButton_9 = new JButton("New button");
+		}
+		return btnNewButton_9;
+	}
+	private JButton getButton_12() {
+		if (button_12 == null) {
+			button_12 = new JButton("");
+			button_12.setEnabled(false);
+			button_12.setVisible(false);
+		}
+		return button_12;
+	}
+	private JButton getButton_13() {
+		if (button_13 == null) {
+			button_13 = new JButton("");
+			button_13.setEnabled(false);
+			button_13.setVisible(false);
+		}
+		return button_13;
+	}
+	private JButton getBtnNewButton_8() {
+		if (btnNewButton_8 == null) {
+			btnNewButton_8 = new JButton("New Button");
+		}
+		return btnNewButton_8;
+	}
+	private JButton getButton_15() {
+		if (button_15 == null) {
+			button_15 = new JButton("");
+			button_15.setEnabled(false);
+			button_15.setVisible(false);
+		}
+		return button_15;
+	}
+	private JButton getButton_16() {
+		if (button_16 == null) {
+			button_16 = new JButton("");
+			button_16.setEnabled(false);
+			button_16.setVisible(false);
+		}
+		return button_16;
+	}
+	private JButton getButton_17() {
+		if (button_17 == null) {
+			button_17 = new JButton("New button");
+		}
+		return button_17;
+	}
+	private JButton getButton_18() {
+		if (button_18 == null) {
+			button_18 = new JButton("New button");
+		}
+		return button_18;
+	}
+	private JButton getButton_19() {
+		if (button_19 == null) {
+			button_19 = new JButton("");
+			button_19.setEnabled(false);
+			button_19.setVisible(false);
+		}
+		return button_19;
+	}
+	private JButton getButton_20() {
+		if (button_20 == null) {
+			button_20 = new JButton("");
+			button_20.setEnabled(false);
+			button_20.setVisible(false);
+		}
+		return button_20;
+	}
+	private JButton getButton_21() {
+		if (button_21 == null) {
+			button_21 = new JButton("");
+			button_21.setEnabled(false);
+			button_21.setVisible(false);
+		}
+		return button_21;
+	}
+	private JButton getButton_22() {
+		if (button_22 == null) {
+			button_22 = new JButton("");
+			button_22.setEnabled(false);
+			button_22.setVisible(false);
+		}
+		return button_22;
+	}
+	private JButton getButton_23() {
+		if (button_23 == null) {
+			button_23 = new JButton("");
+			button_23.setEnabled(false);
+			button_23.setVisible(false);
+		}
+		return button_23;
+	}
+	private JButton getButton_24() {
+		if (button_24 == null) {
+			button_24 = new JButton("New button");
+		}
+		return button_24;
+	}
+	private JButton getButton_25() {
+		if (button_25 == null) {
+			button_25 = new JButton("New button");
+		}
+		return button_25;
+	}
+	private JButton getButton_26() {
+		if (button_26 == null) {
+			button_26 = new JButton("New button");
+		}
+		return button_26;
+	}
+	private JButton getButton_27() {
+		if (button_27 == null) {
+			button_27 = new JButton("New button");
+		}
+		return button_27;
+	}
+	private JButton getButton_28() {
+		if (button_28 == null) {
+			button_28 = new JButton("");
+			button_28.setEnabled(false);
+			button_28.setVisible(false);
+		}
+		return button_28;
+	}
+	private JButton getButton_29() {
+		if (button_29 == null) {
+			button_29 = new JButton("New button");
+		}
+		return button_29;
+	}
+	private JButton getButton_30() {
+		if (button_30 == null) {
+			button_30 = new JButton("New button");
+		}
+		return button_30;
+	}
+	private JButton getButton_31() {
+		if (button_31 == null) {
+			button_31 = new JButton("New button");
+		}
+		return button_31;
+	}
+	private JButton getButton_32() {
+		if (button_32 == null) {
+			button_32 = new JButton("New button");
+		}
+		return button_32;
+	}
+	private JButton getButton_33() {
+		if (button_33 == null) {
+			button_33 = new JButton("New button");
+		}
+		return button_33;
+	}
+	private JButton getButton_34() {
+		if (button_34 == null) {
+			button_34 = new JButton("New button");
+		}
+		return button_34;
+	}
+	private JButton getButton_35() {
+		if (button_35 == null) {
+			button_35 = new JButton("New button");
+		}
+		return button_35;
+	}
+	private JButton getButton_36() {
+		if (button_36 == null) {
+			button_36 = new JButton("");
+			button_36.setEnabled(false);
+			button_36.setVisible(false);
+		}
+		return button_36;
+	}
+	private JButton getButton_37() {
+		if (button_37 == null) {
+			button_37 = new JButton("New button");
+		}
+		return button_37;
+	}
+	private JButton getButton_38() {
+		if (button_38 == null) {
+			button_38 = new JButton("New button");
+		}
+		return button_38;
+	}
+	private JButton getButton_39() {
+		if (button_39 == null) {
+			button_39 = new JButton("");
+			button_39.setEnabled(false);
+			button_39.setVisible(false);
+		}
+		return button_39;
+	}
+	private JButton getButton_40() {
+		if (button_40 == null) {
+			button_40 = new JButton("");
+			button_40.setEnabled(false);
+			button_40.setVisible(false);
+		}
+		return button_40;
+	}
+	private JButton getButton_41() {
+		if (button_41 == null) {
+			button_41 = new JButton("New button");
+		}
+		return button_41;
+	}
+	private JButton getBtnNewButton_10() {
+		if (btnNewButton_10 == null) {
+			btnNewButton_10 = new JButton("New Button");
+		}
+		return btnNewButton_10;
+	}
+	private JButton getButton_43() {
+		if (button_43 == null) {
+			button_43 = new JButton("");
+			button_43.setEnabled(false);
+			button_43.setVisible(false);
+		}
+		return button_43;
+	}
+	private JButton getButton_44() {
+		if (button_44 == null) {
+			button_44 = new JButton("");
+			button_44.setEnabled(false);
+			button_44.setVisible(false);
+		}
+		return button_44;
+	}
+	private JButton getBtnNewButton_11() {
+		if (btnNewButton_11 == null) {
+			btnNewButton_11 = new JButton("New button");
+		}
+		return btnNewButton_11;
+	}
+	private JButton getButton_46() {
+		if (button_46 == null) {
+			button_46 = new JButton("");
+			button_46.setEnabled(false);
+			button_46.setVisible(false);
+		}
+		return button_46;
+	}
+	private JButton getButton_47() {
+		if (button_47 == null) {
+			button_47 = new JButton("");
+			button_47.setEnabled(false);
+			button_47.setVisible(false);
+		}
+		return button_47;
+	}
+	private JButton getButton_48() {
+		if (button_48 == null) {
+			button_48 = new JButton("");
+			button_48.setEnabled(false);
+			button_48.setVisible(false);
+		}
+		return button_48;
+	}
+	private JButton getButton_49() {
+		if (button_49 == null) {
+			button_49 = new JButton("New button");
+		}
+		return button_49;
+	}
+	private JButton getButton_50() {
+		if (button_50 == null) {
+			button_50 = new JButton("New button");
+		}
+		return button_50;
+	}
+	private JButton getButton_51() {
+		if (button_51 == null) {
+			button_51 = new JButton("New button");
+		}
+		return button_51;
+	}
+	private JButton getButton_52() {
+		if (button_52 == null) {
+			button_52 = new JButton("New button");
+		}
+		return button_52;
+	}
+	private JButton getButton_53() {
+		if (button_53 == null) {
+			button_53 = new JButton("New button");
+		}
+		return button_53;
+	}
+	private JButton getButton_54() {
+		if (button_54 == null) {
+			button_54 = new JButton("New button");
+		}
+		return button_54;
 	}
 }

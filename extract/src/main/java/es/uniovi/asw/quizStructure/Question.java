@@ -34,6 +34,17 @@ public class Question {
 	public String getTitle() {
 		return title;
 	}
+
+	public String getTrueAnswer() {
+		for(Answer each: answers)
+		{
+			if(each.isCorrectAnswer())
+				return each.getText();
+			
+		}
+		
+		return null;
+	}
 	
 	
 }
