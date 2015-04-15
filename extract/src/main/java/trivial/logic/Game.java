@@ -3,6 +3,9 @@ package trivial.logic;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Random;
+
+import javax.swing.JButton;
 
 import trivial.gui.QuestionDialog;
 import es.uniovi.asw.quizStructure.Question;
@@ -19,9 +22,12 @@ public class Game {
 	//All the categories
 	int[] categorias;
 	private int currentTurn;
+	private int roll;
+	private JButton[][] board;
 	
-	public Game(ArrayList<Player> players, List<Question> questions) {
+	public Game(ArrayList<Player> players, List<Question> questions, JButton[][] board) {
 		currentTurn = 0;
+		this.board = board;
 		this.players = players;
 		for(int i = 1; i<6; i++)
 		{
@@ -73,10 +79,18 @@ public class Game {
 	}
 	
 	private void movePlayer()
-	
-	
-	
-	
-	
+	{
+		
+	}
+
+	public void getRoll() 
+	{
+		Random rn = new Random();
+		int maximum=6;
+		int minimum=1;
+		int n = maximum - minimum + 1;
+		int i = rn.nextInt() % n;
+		roll =  minimum + i;
+	}	
 	
 }
