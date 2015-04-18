@@ -77,6 +77,7 @@ public class ParserGIFT implements Parser{
 					else if(CurrentLine.contains("}"))
 					{
 						questions.add(new Question(answers, title, category));
+						answers = new ArrayList<Answer>();
 					}
 				}
 			} catch (IOException e) {
