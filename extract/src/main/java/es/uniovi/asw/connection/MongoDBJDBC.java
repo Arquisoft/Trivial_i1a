@@ -23,12 +23,12 @@ public class MongoDBJDBC {
 	 * @throws UnknownHostException 
 	 * @throws FileNotFoundException 
 	 */
-	public static void toDB(String file) throws UnknownHostException, FileNotFoundException {
+public static void toDB(String file) throws UnknownHostException, FileNotFoundException {
 		
 		BufferedReader br = new BufferedReader(new FileReader(new File(file)));
-		
 		MongoClient dbClient = new MongoClient("localhost", 27017);
-		DB db = dbClient.getDB("trivial");
+		DB db = dbClient.getDB("preguntas");
+		
 		
 		try {
 
@@ -51,14 +51,16 @@ public class MongoDBJDBC {
 						 * Now we check if the given question is already
 						 * in the database.
 						 */
-						if (enunciadoFichero.equalsIgnoreCase(question)) {
-							alreadyInDB = true;
-						}
+//						if (enunciadoFichero.equalsIgnoreCase(question)) {
+//							alreadyInDB = true;
+//							System.out.println("Is already in the Database");
+//						}
 					}
 					if (!alreadyInDB) {
 						jsonObjectFichero.put("_id", collection.getCount() + 1);
 						collection.insert(jsonObjectFichero);
 					}
+					
 				} 
 				
 				else {
@@ -70,6 +72,7 @@ public class MongoDBJDBC {
 			}
 			
 			br.close();
+			
 
 		} catch (IOException e) {
 			e.printStackTrace();
