@@ -1,3 +1,6 @@
+package es.uniovi.asw.connection;
+
+
 import java.net.UnknownHostException;
 
 import com.mongodb.BasicDBObject;
