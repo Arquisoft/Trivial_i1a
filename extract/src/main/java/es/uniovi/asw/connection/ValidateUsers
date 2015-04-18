@@ -1,0 +1,33 @@
+import java.net.UnknownHostException;
+
+import com.mongodb.BasicDBObject;
+import com.mongodb.DB;
+import com.mongodb.DBCollection;
+import com.mongodb.DBCursor;
+import com.mongodb.DBObject;
+import com.mongodb.Mongo;
+
+public class ValidateUsers {
+	
+public static boolean getUser(String username, String password, String rol) throws UnknownHostException {
+	Mongo conn = new Mongo();
+	
+	DB db = conn.getDB("Users");
+	
+	DBCollection collection = db.getCollection("Users");
+        
+    BasicDBObject filter = new BasicDBObject();
+    filter.put("Username", username);
+    filter.put("Password", password);
+    filter.put("Rol", rol);
+    DBObject result = collection.findOne(filter);
+    
+    if(result==null)
+    	System.out.println("The user, password or role is wrong");
+    else {
+    	return true;
+    }
+    return false;
+    }
+
+}
