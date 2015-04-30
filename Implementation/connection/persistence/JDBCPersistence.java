@@ -85,7 +85,7 @@ public class JDBCPersistence {
 	    System.out.println(args.get("title"));
 	}
 	
-	public static void getAnswer(int id){
+	public static void getAnswers(int id){
 		Mongo conn = new Mongo();
 
 		DB db = conn.getDB("preguntas");
