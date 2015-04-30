@@ -70,8 +70,19 @@ public class JDBCPersistence {
 		
 	}
 	
-	public static void getQuestion(){
-		//IMPLEMENTAR.
+	public static void getQuestion(int id){
+		Mongo conn = new Mongo();
+
+		DB db = conn.getDB("preguntas");
+
+		DBCollection collection = db.getCollection("Questions");
+
+		BasicDBObject filter = new BasicDBObject();
+		filter.put("_id",id);
+	    DBCursor cursor = collection.find(filter);
+	   // System.out.println(cursor.next());
+	    DBObject args= cursor.next();
+	    System.out.println(args.get("title"));
 	}
 	
 	public static void getAnswer(){
