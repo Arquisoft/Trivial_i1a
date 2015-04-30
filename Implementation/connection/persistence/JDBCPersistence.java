@@ -85,8 +85,23 @@ public class JDBCPersistence {
 	    System.out.println(args.get("title"));
 	}
 	
-	public static void getAnswer(){
-		//IMPLEMENTAR.
+	public static void getAnswer(int id){
+		Mongo conn = new Mongo();
+
+		DB db = conn.getDB("preguntas");
+
+		DBCollection collection = db.getCollection("Questions");
+
+		BasicDBObject filter = new BasicDBObject();
+		filter.put("_id",id);
+	    DBCursor cursor = collection.find(filter);
+	   // System.out.println(cursor.next());
+	    DBObject args= cursor.next();
+	    String[] separacion1=args.get("answers").toString().split(":");
+	    for(int i=1;i<9;i=i+2){
+	    String[] separacion2=separacion1[i].toString().split(",");
+	    System.out.println(separacion2[0]);
+	    }
 	}
 
 }
