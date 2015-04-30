@@ -19,13 +19,6 @@ public class JDBCPersistence {
 
     }
 	
-	public static DBCursor getScore(String username) {
-		
-		DBObject get = new QueryBuilder().put("name").is(username).get();
-		
-		return getUsers().find(get);
-		
-	}
 	
 	public static void updateScore(String username, int score){
 		
@@ -40,6 +33,22 @@ public class JDBCPersistence {
 		
 		collection.update(criteria, update);
 		
+	}
+	public static void getScore(String username) {
+		
+
+		Mongo conn = new Mongo();
+
+		DB db = conn.getDB("Users");
+
+		DBCollection collection = db.getCollection("Users");
+
+		BasicDBObject filter = new BasicDBObject();
+		filter.put("Username",username);
+	    DBCursor cursor = collection.find(filter);
+	   // System.out.println(cursor.next());
+	    DBObject args= cursor.next();
+	    System.out.println(args.get("Puntuacion"));
 	}
 	
 	public static void getGameplay(String username){
