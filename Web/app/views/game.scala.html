@@ -1,10 +1,618 @@
-@(message: String)
+@(message: String,login:String, score:Int, questions1: List[Questions], questions2: List[Questions],questions3: List[Questions],questions4: List[Questions])
 @main(message){
-<h1>New Game</h1>
+<h1 style="text-align:left"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;New Game &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Player: @login     Score:</h1>
+<div id="sco">@score</div>
 <svg id="board"
-     xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1000 1000"
+     xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1000 570"
    preserveAspectRatio="xMinYMin meet">
   <image x="0" y="-210" height="1000" width="1000"  xlink:href="@routes.Assets.at("images/Board.svg")" />
 </svg>
 
+
+<script type ="text/javascript">
+var score=@score;
+var lastButton="";
+</script>
+
+
+<script>
+
+
+document.getElementById('demo').innerHTML= document.getElementById('verde2').innerHTML; 
+
+</script>
+
+<!--ESTOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO-->
+
+
+<div id="demo">
+
+</div>
+
+<div id="blanco0_4" style="display:none">
+<p>
+@questions3.get(12).title
+<form action="">
+<input id="false" type="radio" name="answer" value="">@questions3.get(12).answers.get(0)<br>
+<input id="true" type="radio" name="answer" value="">@questions3.get(12).answers.get(1)<br>
+<input id="false" type="radio" name="answer" value="">@questions3.get(12).answers.get(2)<br>
+<input id="false" type="radio" name="answer" value="">@questions3.get(12).answers.get(3)<br>
+</form>
+</p>
+</div>
+
+<div id="blanco3_0" style="display:none">
+<p>
+@questions1.get(7).title
+<form action="">
+<input id="false" type="radio" name="answer" value="">@questions1.get(7).answers.get(0)<br>
+<input id="true" type="radio" name="answer" value="">@questions1.get(7).answers.get(1)<br>
+<input id="false" type="radio" name="answer" value="">@questions1.get(7).answers.get(2)<br>
+<input id="false" type="radio" name="answer" value="">@questions1.get(7).answers.get(3)<br>
+</form>
+</p>
+</div>
+
+<div id="blanco3_2" style="display:none">
+<p>
+@questions2.get(7).title
+<form action="">
+<input id="false" type="radio" name="answer" value="">@questions2.get(7).answers.get(0)<br>
+<input id="true" type="radio" name="answer" value="">@questions2.get(7).answers.get(1)<br>
+<input id="false" type="radio" name="answer" value="">@questions2.get(7).answers.get(2)<br>
+<input id="false" type="radio" name="answer" value="">@questions2.get(7).answers.get(3)<br>
+</form>
+</p>
+</div>
+
+<div id="blanco3_4" style="display:none">
+<p>
+@questions2.get(7).title
+<form action="">
+<input id="false" type="radio" name="answer" value="">@questions2.get(7).answers.get(0)<br>
+<input id="truew" type="radio" name="answer" value="">@questions2.get(7).answers.get(1)<br>
+<input id="false" type="radio" name="answer" value="">@questions2.get(7).answers.get(2)<br>
+<input id="false" type="radio" name="answer" value="">@questions2.get(7).answers.get(3)<br>
+</form>
+</p>
+</div>
+
+<div id="blanco3_6" style="display:none">
+<p>
+@questions3.get(7).title
+<form action="">
+<input id="false" type="radio" name="answer" value="">@questions3.get(7).answers.get(0)<br>
+<input id="true" type="radio" name="answer" value="">@questions3.get(7).answers.get(1)<br>
+<input id="false" type="radio" name="answer" value="">@questions3.get(7).answers.get(2)<br>
+<input id="false" type="radio" name="answer" value="">@questions3.get(7).answers.get(3)<br>
+</form>
+</p>
+</div>
+
+<div id="blanco3_8" style="display:none">
+<p>
+@questions3.get(7).title
+<form action="">
+<input id="false" type="radio" name="answer" value="">@questions3.get(6).answers.get(0)<br>
+<input id="true" type="radio" name="answer" value="">@questions3.get(6).answers.get(1)<br>
+<input id="false" type="radio" name="answer" value="">@questions3.get(6).answers.get(2)<br>
+<input id="false" type="radio" name="answer" value="">@questions3.get(6).answers.get(3)<br>
+</form>
+</p>
+</div>
+
+<div id="blanco6_4" style="display:none">
+<p>
+@questions4.get(7).title
+<form action="">
+<input id="false" type="radio" name="answer" value="">@questions4.get(6).answers.get(0)<br>
+<input id="true" type="radio" name="answer" value="">@questions4.get(6).answers.get(1)<br>
+<input id="false" type="radio" name="answer" value="">@questions4.get(6).answers.get(2)<br>
+<input id="false" type="radio" name="answer" value="">@questions4.get(6).answers.get(3)<br>
+</form>
+</p>
+</div>
+
+<div id="naranja0_6" style="display:none">
+<p>
+@questions3.get(7).title
+<form action="">
+<input id="false" type="radio" name="answer" value="">@questions3.get(7).answers.get(0)<br>
+<input id="true" type="radio" name="answer" value="">@questions3.get(7).answers.get(1)<br>
+<input id="false" type="radio" name="answer" value="">@questions3.get(7).answers.get(2)<br>
+<input id="false" type="radio" name="answer" value="">@questions3.get(7).answers.get(3)<br>
+</form>
+</p>
+</div>
+
+<div id="naranja2_8" style="display:none">
+<p>
+@questions3.get(8).title
+<form action="">
+<input id="false" type="radio" name="answer" value="">@questions3.get(8).answers.get(0)<br>
+<input id="true" type="radio" name="answer" value="">@questions3.get(8).answers.get(1)<br>
+<input id="false" type="radio" name="answer" value="">@questions3.get(8).answers.get(2)<br>
+<input id="false" type="radio" name="answer" value="">@questions3.get(8).answers.get(3)<br>
+</form>
+</p>
+</div>
+
+<div id="naranja6_0" style="display:none">
+<p>
+@questions3.get(9).title
+<form action="">
+<input id="false" type="radio" name="answer" value="">@questions3.get(9).answers.get(0)<br>
+<input id="true" type="radio" name="answer" value="">@questions3.get(9).answers.get(1)<br>
+<input id="false" type="radio" name="answer" value="">@questions3.get(9).answers.get(2)<br>
+<input id="false" type="radio" name="answer" value="">@questions3.get(9).answers.get(3)<br>
+</form>
+</p>
+</div>
+
+<div id="naranja6_7" style="display:none">
+<p>
+@questions3.get(10).title
+<form action="">
+<input id="false" type="radio" name="answer" value="">@questions3.get(10).answers.get(0)<br>
+<input id="true" type="radio" name="answer" value="">@questions3.get(10).answers.get(1)<br>
+<input id="false" type="radio" name="answer" value="">@questions3.get(10).answers.get(2)<br>
+<input id="false" type="radio" name="answer" value="">@questions3.get(10).answers.get(3)<br>
+</form>
+</p>
+</div>
+<div id="morado0_5" style="display:none">
+<p>
+@questions4.get(7).title
+<form action="">
+<input id="false" type="radio" name="answer" value="">@questions4.get(7).answers.get(0)<br>
+<input id="true" type="radio" name="answer" value="">@questions4.get(7).answers.get(1)<br>
+<input id="false" type="radio" name="answer" value="">@questions4.get(7).answers.get(2)<br>
+<input id="false" type="radio" name="answer" value="">@questions4.get(7).answers.get(3)<br>
+</form>
+</p>
+</div>
+<div id="morado3_3" style="display:none">
+<p>
+@questions4.get(8).title
+<form action="">
+<input id="false" type="radio" name="answer" value="">@questions4.get(8).answers.get(0)<br>
+<input id="true" type="radio" name="answer" value="">@questions4.get(8).answers.get(1)<br>
+<input id="false" type="radio" name="answer" value="">@questions4.get(8).answers.get(2)<br>
+<input id="false" type="radio" name="answer" value="">@questions4.get(8).answers.get(3)<br>
+</form>
+</p>
+</div>
+
+<div id="morado5_4" style="display:none">
+<p>
+@questions4.get(9).title
+<form action="">
+<input id="false" type="radio" name="answer" value="">@questions4.get(9).answers.get(0)<br>
+<input id="true" type="radio" name="answer" value="">@questions4.get(9).answers.get(1)<br>
+<input id="false" type="radio" name="answer" value="">@questions4.get(9).answers.get(2)<br>
+<input id="false" type="radio" name="answer" value="">@questions4.get(9).answers.get(3)<br>
+</form>
+</p>
+</div>
+
+<div id="morado6_1" style="display:none">
+<p>
+@questions4.get(12).title
+<form action="">
+<input id="false" type="radio" name="answer" value="">@questions4.get(12).answers.get(0)<br>
+<input id="true" type="radio" name="answer" value="">@questions4.get(12).answers.get(1)<br>
+<input id="false" type="radio" name="answer" value="">@questions4.get(12).answers.get(2)<br>
+<input id="false" type="radio" name="answer" value="">@questions4.get(12).answers.get(3)<br>
+</form>
+</p>
+</div>
+<div id="morado6_8" style="display:none">
+<p>
+@questions4.get(10).title
+<form action="">
+<input id="false" type="radio" name="answer" value="">@questions4.get(10).answers.get(0)<br>
+<input id="true" type="radio" name="answer" value="">@questions4.get(10).answers.get(1)<br>
+<input id="false" type="radio" name="answer" value="">@questions4.get(10).answers.get(2)<br>
+<input id="false" type="radio" name="answer" value="">@questions4.get(10).answers.get(3)<br>
+</form>
+</p>
+</div>
+
+
+<div id="amarillo0_3" style="display:none">
+<p>
+@questions4.get(0).title
+<form action="">
+<input id="false" type="radio" name="answer" value="">@questions4.get(0).answers.get(0)<br>
+<input id="true" type="radio" name="answer" value="">@questions4.get(0).answers.get(1)<br>
+<input id="false" type="radio" name="answer" value="">@questions4.get(0).answers.get(2)<br>
+<input id="false" type="radio" name="answer" value="">@questions4.get(0).answers.get(3)<br>
+</form>
+</p>
+</div>
+
+<div id="amarillo0_8" style="display:none">
+<p>
+@questions4.get(1).title
+<form action="">
+<input id="false" type="radio" name="answer" value="">@questions4.get(1).answers.get(0)<br>
+<input id="true" type="radio" name="answer" value="">@questions4.get(1).answers.get(1)<br>
+<input id="false" type="radio" name="answer" value="">@questions4.get(1).answers.get(2)<br>
+<input id="false" type="radio" name="answer" value="">@questions4.get(1).answers.get(3)<br>
+</form>
+</p>
+</div>
+
+<div id="amarillo3_5" style="display:none">
+<p>
+@questions4.get(2).title
+<form action="">
+<input id="false" type="radio" name="answer" value="">@questions4.get(2).answers.get(0)<br>
+<input id="true" type="radio" name="answer" value="">@questions4.get(2).answers.get(1)<br>
+<input id="false" type="radio" name="answer" value="">@questions4.get(2).answers.get(2)<br>
+<input id="false" type="radio" name="answer" value="">@questions4.get(2).answers.get(3)<br>
+</form>
+</p>
+</div>
+
+<div id="amarillo4_8" style="display:none">
+<p>
+@questions4.get(3).title
+<form action="">
+<input id="false" type="radio" name="answer" value="">@questions4.get(3).answers.get(0)<br>
+<input id="true" type="radio" name="answer" value="">@questions4.get(3).answers.get(1)<br>
+<input id="false" type="radio" name="answer" value="">@questions4.get(3).answers.get(2)<br>
+<input id="false" type="radio" name="answer" value="">@questions4.get(3).answers.get(3)<br>
+</form>
+</p>
+</div>
+
+<div id="amarillo6_3" style="display:none">
+<p>
+@questions4.get(4).title
+<form action="">
+<input id="false" type="radio" name="answer" value="">@questions4.get(4).answers.get(0)<br>
+<input id="true" type="radio" name="answer" value="">@questions4.get(4).answers.get(1)<br>
+<input id="false" type="radio" name="answer" value="">@questions4.get(4).answers.get(2)<br>
+<input id="false" type="radio" name="answer" value="">@questions4.get(4).answers.get(3)<br>
+</form>
+</p>
+</div>
+
+
+
+<div id="rojo0_2" style="display:none">
+<p>
+@questions3.get(0).title
+<form action="">
+<input id="false" type="radio" name="answer" value="">@questions3.get(0).answers.get(0)<br>
+<input id="true" type="radio" name="answer" value="">@questions3.get(0).answers.get(1)<br>
+<input id="false" type="radio" name="answer" value="">@questions3.get(0).answers.get(2)<br>
+<input id="false" type="radio" name="answer" value="">@questions3.get(0).answers.get(3)<br>
+</form>
+</p>
+</div>
+
+
+<div id="rojo0_7" style="display:none">
+<p>
+@questions3.get(1).title
+<form action="">
+<input id="false" type="radio" name="answer" value="">@questions3.get(1).answers.get(0)<br>
+<input id="true" type="radio" name="answer" value="">@questions3.get(1).answers.get(1)<br>
+<input id="false" type="radio" name="answer" value="">@questions3.get(1).answers.get(2)<br>
+<input id="false" type="radio" name="answer" value="">@questions3.get(1).answers.get(3)<br>
+</form>
+</p>
+</div>
+<div id="rojo2_0" style="display:none">
+<p>
+@questions3.get(2).title
+<form action="">
+<input id="false" type="radio" name="answer" value="">@questions3.get(2).answers.get(0)<br>
+<input id="true" type="radio" name="answer" value="">@questions3.get(2).answers.get(1)<br>
+<input id="false" type="radio" name="answer" value="">@questions3.get(2).answers.get(2)<br>
+<input id="false" type="radio" name="answer" value="">@questions3.get(2).answers.get(3)<br>
+</form>
+</p>
+</div>
+<div id="rojo4_0" style="display:none">
+<p>
+@questions3.get(3).title
+<form action="">
+<input id="false" type="radio" name="answer" value="">@questions3.get(3).answers.get(0)<br>
+<input id="true" type="radio" name="answer" value="">@questions3.get(3).answers.get(1)<br>
+<input id="false" type="radio" name="answer" value="">@questions3.get(3).answers.get(2)<br>
+<input id="false" type="radio" name="answer" value="">@questions3.get(3).answers.get(3)<br>
+</form>
+</p>
+</div>
+<div id="rojo6_5" style="display:none">
+<p>
+@questions3.get(4).title
+<form action="">
+<input id="false" type="radio" name="answer" value="">@questions2.get(4).answers.get(0)<br>
+<input id="true" type="radio" name="answer" value="">@questions2.get(4).answers.get(1)<br>
+<input id="false" type="radio" name="answer" value="">@questions2.get(4).answers.get(2)<br>
+<input id="false" type="radio" name="answer" value="">@questions2.get(4).answers.get(3)<br>
+</form>
+</p>
+</div>
+<div id="rojo5_8" style="display:none">
+<p>
+@questions3.get(5).title
+<form action="">
+<input id="false" type="radio" name="answer" value="">@questions3.get(5).answers.get(0)<br>
+<input id="true" type="radio" name="answer" value="">@questions3.get(5).answers.get(1)<br>
+<input id="false" type="radio" name="answer" value="">@questions3.get(5).answers.get(2)<br>
+<input id="false" type="radio" name="answer" value="">@questions3.get(5).answers.get(3)<br>
+</form>
+</p>
+</div>
+
+<div id="verde0_1" style="display:none">
+<p>
+@questions2.get(0).title
+<form action="">
+<input id="false" type="radio" name="answer" value="">@questions2.get(0).answers.get(0)<br>
+<input id="true" type="radio" name="answer" value="female">@questions2.get(0).answers.get(1)<br>
+<input id="false" type="radio" name="answer" value="">@questions2.get(0).answers.get(2)<br>
+<input id="false" type="radio" name="answer" value="">@questions2.get(0).answers.get(3)<br>
+</form>
+</p>
+</div>
+
+<div id="verde1_0" style="display:none">
+<p>
+@questions2.get(1).title
+<form action="">
+<input id="true" type="radio" name="answer" value="">@questions2.get(1).answers.get(0)<br>
+<input id="false" type="radio" name="answer" value="female">@questions2.get(1).answers.get(1)<br>
+<input id="true" type="radio" name="answer" value="">@questions2.get(1).answers.get(2)<br>
+<input id="false" type="radio" name="answer" value="">@questions2.get(1).answers.get(3)<br>
+</form>
+</p>
+</div>
+<div id="verde1_4" style="display:none">
+<p>
+@questions2.get(2).title
+<form action="">
+<input id="false" type="radio" name="answer" value="">@questions2.get(2).answers.get(0)<br>
+<input id="true" type="radio" name="answer" value="female">@questions2.get(2).answers.get(1)<br>
+<input id="false" type="radio" name="answer" value="">@questions2.get(2).answers.get(2)<br>
+<input id="false" type="radio" name="answer" value="">@questions2.get(2).answers.get(3)<br>
+</form>
+</p>
+</div>
+<div id="verde1_8" style="display:none">
+<p>
+@questions2.get(3).title
+<form action="">
+<input id="false" type="radio" name="answer" value="">@questions2.get(3).answers.get(0)<br>
+<input id="false" type="radio" name="answer" value="female">@questions2.get(3).answers.get(1)<br>
+<input id="false" type="radio" name="answer" value="">@questions2.get(3).answers.get(2)<br>
+<input id="true" type="radio" name="answer" value="">@questions2.get(3).answers.get(3)<br>
+</form>
+</p>
+</div>
+<div id="verde5_0" style="display:none">
+<p>
+@questions2.get(4).title
+<form action="">
+<input id="false" type="radio" name="answer" value="">@questions2.get(4).answers.get(0)<br>
+<input id="true" type="radio" name="answer" value="female">@questions2.get(4).answers.get(1)<br>
+<input id="false" type="radio" name="answer" value="">@questions2.get(4).answers.get(2)<br>
+<input id="false" type="radio" name="answer" value="">@questions2.get(4).answers.get(3)<br>
+</form>
+</p>
+</div>
+
+<div id="verde6_6" style="display:none">
+<p>
+@questions2.get(5).title
+<form action="">
+<input id="false" type="radio" name="answer" value="">@questions2.get(5).answers.get(0)<br>
+<input id="true" type="radio" name="answer" value="female">@questions2.get(5).answers.get(1)<br>
+<input id="false" type="radio" name="answer" value="">@questions2.get(5).answers.get(2)<br>
+<input id="false" type="radio" name="answer" value="">@questions2.get(5).answers.get(3)<br>
+</form>
+</p>
+</div>
+
+
+<div id="azul3_7" style="display:none">
+<p>
+@questions1.get(0).title
+<form action="">
+<input id="true" type="radio" name="answer" value="">@questions1.get(0).answers.get(0)<br>
+<input id="false" type="radio" name="answer" value="">@questions1.get(0).answers.get(1)<br>
+<input id="false" type="radio" name="answer" value="">@questions1.get(0).answers.get(2)<br>
+<input id="false" type="radio" name="answer" value="">@questions1.get(0).answers.get(3)<br>
+</form>
+</p>
+</div>
+
+<div id="azul0_0" style="display:none">
+<p>
+@questions1.get(1).title
+<form action="">
+<input id="false" type="radio" name="answer" value="">@questions1.get(1).answers.get(0)<br>
+<input id="true" type="radio" name="answer" value="">@questions1.get(1).answers.get(1)<br>
+<input id="false" type="radio" name="answer" value="">@questions1.get(1).answers.get(2)<br>
+<input id="false" type="radio" name="answer" value="">@questions1.get(1).answers.get(3)<br>
+</form>
+</p>
+</div>
+
+<div id="azul6_2" style="display:none">
+<p>
+@questions1.get(2).title
+<form action="">
+<input id="false" type="radio" name="answer" value="">@questions1.get(2).answers.get(0)<br>
+<input id="true" type="radio" name="answer" value="">@questions1.get(2).answers.get(1)<br>
+<input id="false" type="radio" name="answer" value="">@questions1.get(2).answers.get(2)<br>
+<input id="false" type="radio" name="answer" value="">@questions1.get(2).answers.get(3)<br>
+</form>
+</p>
+</div>
+
+<div id="azul2_4" style="display:none">
+<p>
+@questions1.get(3).title
+<form action="">
+<input id="false" type="radio" name="answer" value="">@questions1.get(3).answers.get(0)<br>
+<input id="false" type="radio" name="answer" value="">@questions1.get(3).answers.get(1)<br>
+<input id="false" type="radio" name="answer" value="">@questions1.get(3).answers.get(2)<br>
+<input id="true" type="radio" name="answer" value="">@questions1.get(3).answers.get(3)<br>
+</form>
+</p>
+</div>
+
+<div id="azul4_4" style="display:none">
+<p>
+@questions1.get(4).title
+<form action="">
+<input id="false" type="radio" name="answer" value="">@questions1.get(4).answers.get(0)<br>
+<input id="false" type="radio" name="answer" value="">@questions1.get(4).answers.get(1)<br>
+<input id="false" type="radio" name="answer" value="">@questions1.get(4).answers.get(2)<br>
+<input id="true" type="radio" name="answer" value="">@questions1.get(4).answers.get(3)<br>
+</form>
+</p>
+</div>
+
+<div id="azul3_1" style="display:none">
+<p>
+@questions1.get(5).title
+<form action="">
+<input id="false" type="radio" name="answer" value="">@questions1.get(5).answers.get(0)<br>
+<input id="false" type="radio" name="answer" value="">@questions1.get(5).answers.get(1)<br>
+<input id="false" type="radio" name="answer" value="">@questions1.get(5).answers.get(2)<br>
+<input id="true" type="radio" name="answer" value="">@questions1.get(5).answers.get(3)<br>
+</form>
+</p>
+</div>
+
+
+<div id="dice">
+<button id="dice" onclick="document.getElementById('tirada').innerHTML = Math.floor((Math.random() * 6) + 1);">Drop the dice!</button></div> <div id="tirada"> 0</div>
+ 
+
+<button id="bk" onclick="corchete();win()">Respond!</button>
+
+<!--Red,Blue,Yellow,Green are the categories-->
+<!--Buttons First row -->
+<!--AZUL-->
+<button type="button" id="azul0_0" onclick="document.getElementById('demo').innerHTML = document.getElementById('azul0_0').innerHTML" style="position:absolute;top: 18%;left: 1%;"></button>
+ <!--VERDE-->
+<button type="button" id="verde0_1" onclick="document.getElementById('demo').innerHTML = document.getElementById('verde0_1').innerHTML" style="position:absolute;top: 18%;left: 12%;"></button>
+ <!--ROJO-->
+<button type="button" id="rojo0_2" onclick="document.getElementById('demo').innerHTML = document.getElementById('rojo0_2').innerHTML" style="position:absolute;top: 18%;left: 23%;"></button>
+ <!--AMARILLO-->
+<button type="button" id="amarillo0_3" onclick="document.getElementById('demo').innerHTML = document.getElementById('amarillo0_3').innerHTML" style="position:absolute;top: 18%;left: 34%;"></button>
+ <!--BLANCO-->
+<button type="button" id="blanco0_4" onclick="document.getElementById('demo').innerHTML = document.getElementById('blanco0_4').innerHTML" style="position:absolute;top: 18%;left: 45%;"></button>
+ <!--MORADO-->
+<button type="button" id="morado0_5" onclick="document.getElementById('demo').innerHTML = document.getElementById('morado0_5').innerHTML" style="position:absolute;top: 18%;left: 56%; "></button>
+ <!--MARRON/NARANJA-->
+<button type="button" id="naranja0_6" onclick="document.getElementById('demo').innerHTML = document.getElementById('naranja0_6').innerHTML" style="position:absolute;top: 18%;left: 67%;"></button>
+<!--ROJO-->
+<button type="button" id="rojo0_7" onclick="document.getElementById('demo').innerHTML = document.getElementById('rojo0_7').innerHTML" style="position:absolute;top: 18%;left: 78%;"></button>
+<!--AMARILLO-->
+<button type="button" id="amarillo0_8" onclick="document.getElementById('demo').innerHTML = document.getElementById('amarillo0_8').innerHTML" style="position:absolute;top: 18%;left: 88.7%;"></button>
+
+<!--Buttons Last row -->
+ <!--NARANJA-->
+<button type="button" id="naranja6_0" onclick="document.getElementById('demo').innerHTML = document.getElementById('naranja6_0').innerHTML" style="position:absolute;top: 113%;left: 1%;"></button>
+ <!--MORADO-->
+<button type="button" id="morado6_1" onclick="document.getElementById('demo').innerHTML = document.getElementById('morado6_1').innerHTML" style="position:absolute;top: 113%;left: 12%; "></button>
+<!--AZUL-->
+<button type="button" id="azul6_2" onclick="document.getElementById('demo').innerHTML = document.getElementById('azul6_2').innerHTML" style="position:absolute;top: 113%;left: 23%;"></button>
+<!--AMARILLO-->
+<button type="button" id="amarillo6_3" onclick="document.getElementById('demo').innerHTML = document.getElementById('amarillo6_3').innerHTML" style="position:absolute;top: 113%;left: 34%;"></button>
+<!--BLANCO-->
+<button type="button" id="blanco6_4" onclick="document.getElementById('demo').innerHTML = document.getElementById('blanco6_4').innerHTML" style="position:absolute;top: 113%;left: 45%;"></button>
+ <!--ROJO-->
+<button type="button" id="rojo6_5" onclick="document.getElementById('demo').innerHTML = document.getElementById('rojo0_2').innerHTML" style="position:absolute;top: 113%;left: 56%;"></button>
+ <!--VERDE-->
+<button type="button" id="verde6_6" onclick="document.getElementById('demo').innerHTML = document.getElementById('verde6_6').innerHTML" style="position:absolute;top: 113%;left: 67%; "></button>
+ <!--NARANJA-->
+<button type="button" id="naranja6_7" onclick="document.getElementById('demo').innerHTML = document.getElementById('naranja6_7').innerHTML" style="position:absolute;top: 113%;left: 78%;"></button>
+ <!--MORADO-->
+<button type="button" id="morado6_8" onclick="document.getElementById('demo').innerHTML = document.getElementById('morado6_8').innerHTML" style="position:absolute;top: 113%;left: 88.7%;"></button>
+
+<!--Buttons Second row -->
+<button type="button" id="verde1_0" onclick="document.getElementById('demo').innerHTML = document.getElementById('verde1_0').innerHTML" style="position:absolute;top: 35%;left: 1%; "></button>
+<button type="button" id="verde1_4" onclick="document.getElementById('demo').innerHTML = document.getElementById('verde1_4').innerHTML" style="position:absolute;top: 35%;left: 45%;"></button>
+<button type="button" id="verde1_8" onclick="document.getElementById('demo').innerHTML = document.getElementById('verde1_8').innerHTML" style="position:absolute;top: 35%;left: 88.7%;"></button>
+<!--Buttons Third row -->
+<button type="button" id="rojo2_0" onclick="document.getElementById('demo').innerHTML = document.getElementById('rojo2_0').innerHTML" style="position:absolute;top: 50%;left: 1%;"></button>
+<button type="button" id="azul2_4" onclick="document.getElementById('demo').innerHTML = document.getElementById('azul2_4').innerHTML" style="position:absolute;top: 50%;left: 45%;"></button>
+<button type="button" id="naranja2_8" onclick="document.getElementById('demo').innerHTML =document.getElementById('naranja2_8').innerHTML" style="position:absolute;top: 50%;left: 88.7%;"></button>
+<!--Buttons Fifth row -->
+<button type="button" id="rojo4_0" onclick="document.getElementById('demo').innerHTML = document.getElementById('rojo4_0').innerHTML" style="position:absolute;top: 82%;left: 1%;"></button>
+<button type="button" id="azul4_4" onclick="document.getElementById('demo').innerHTML = document.getElementById('azul4_4').innerHTML" style="position:absolute;top: 82%;left: 45%;"></button>
+<button type="button" id="amarillo4_8" onclick="document.getElementById('demo').innerHTML = document.getElementById('amarillo4_8').innerHTML" style="position:absolute;top: 82%;left: 88.7%;"></button>
+<!--Buttons Sixth row -->
+<button type="button" id="verde5_0" onclick="document.getElementById('demo').innerHTML = document.getElementById('verde5_0').innerHTML" style="position:absolute;top: 98%;left: 1%;"></button>
+<button type="button" id="morado5_4" onclick="document.getElementById('demo').innerHTML = document.getElementById('morado5_4').innerHTML" style="position:absolute;top: 98%;left: 45%;"></button>
+<button type="button" id="rojo5_8" onclick="document.getElementById('demo').innerHTML = document.getElementById('rojo5_8').innerHTML" style="position:absolute;top: 98%;left: 88.7%;"></button>
+
+<!--Buttons Medium row -->
+<button type="button" id="blanco3_0" onclick="document.getElementById('demo').innerHTML = document.getElementById('blanco3_0').innerHTML" style="position:absolute;top: 66%;left: 1%;"></button>
+<button type="button" id="azul3_1" onclick="document.getElementById('demo').innerHTML = document.getElementById('azul3_1').innerHTML" style="position:absolute;top: 66%;left: 12%;"></button>
+<button type="button" id="blanco3_2" onclick="document.getElementById('demo').innerHTML = document.getElementById('blanco3_2').innerHTML" style="position:absolute;top: 66%;left: 23%;"></button>
+<button type="button" id="morado3_3" onclick="document.getElementById('demo').innerHTML =  document.getElementById('morado3_3').innerHTML; document.getElementById('morado3_3').style.background='#FFFFFF';returnColor(this.id)" style="position:absolute;top: 66%;left: 34%;"></button>
+<button type="button" id="blanco3_4" onclick="document.getElementById('demo').innerHTML = document.getElementById('blanco3_4').innerHTML" style="position:absolute;top: 66%;left: 45%;"></button>
+<button type="button" id="amarillo3_5" onclick="document.getElementById('demo').innerHTML = document.getElementById('amarillo3_5').innerHTML" style="position:absolute;top: 66%;left: 56%;"></button>
+<button type="button" id="blanco3_6" onclick="document.getElementById('demo').innerHTML = document.getElementById('blanco3_6').innerHTML" style="position:absolute;top: 66%;left: 67%;"></button>
+
+
+<button type="button" id="azul3_7" onclick="document.getElementById('demo').innerHTML =  document.getElementById('azul3_7').innerHTML; returnColor(this.id); document.getElementById('azul3_7').style.background='#FFFFFF'" style="position:absolute;top: 66%;left: 78%;"></button>
+
+
+<button type="button" id="blanco3_8" onclick="document.getElementById('demo').innerHTML = document.getElementById('blanco3_8').innerHTML" style="position:absolute;top: 66%;left: 88.7%;">
+ </button>
+
+
+
+<script type="text/javascript">
+function win(){
+var correct=document.getElementById('truew');
+if(correct.checked===true && score >= 20){
+score=score+100;
+document.getElementById('sco').innerHTML = @score+score;
+ location.href ="/winning/@login/9001"; 
 }
+}
+
+</script>
+
+<script type="text/javascript">
+
+
+
+function corchete(){
+var correctAnswer=document.getElementById('true');
+if(correctAnswer.checked===true){
+score=score+1;
+document.getElementById('sco').innerHTML = @score+score;
+
+}
+
+}
+
+function returnColor(id){
+lastButton="";
+if(lastButton.indexOf("morado")>-1){
+document.getElementById(lastButton).style.background='#fc0591';
+}
+if(lastButton.indexOf("azul")>-1){
+document.getElementById(lastButton).style.background='#3BA4C7';
+}
+lastButton=id;
+}
+</script>
+
+
+}
+

@@ -1,8 +1,9 @@
 @(message: String)
 @main(message){
-<h1>Login<h1>
+<h1 id="tit">Welcome to the Squared Trivial Game &#169;<h1>
+<div id="loginForm">
 <form action="userMain">
-First name:<br>
+User name:<br>
 <input type="text" name="login">
 <br>
 Password:<br>
@@ -10,4 +11,17 @@ Password:<br>
 <br><br>
 <input type="submit" value="Submit">
 </form>
+<div id="reg">
+<form action ="register">
+<input type="submit" value="Register">
+</form>
+</div>
+</div>
+<img id="trivialito" src="@routes.Assets.at("images/trivialito.svg")" alt="trivialito"/>
+<img id="bocadillo" src="@routes.Assets.at("images/bocadillo.png")" alt="bocadillo">
+<p id="help">
+Hi...I'm Trivialito </br>and please do not panic,</br> i´m ugly now... but if</br> you play 
+ this magnificent game</br> i will recover all my colors,</br> PLEASE HELP ME!!!! 
+</p>
+
 }

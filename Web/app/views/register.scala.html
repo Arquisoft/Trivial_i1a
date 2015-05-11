@@ -1,0 +1,22 @@
+@(message: String)
+
+@main(message){
+<h1>Join us!!!!</h1>
+<div id="regist">
+<form action="userMain">
+User name:<br>
+<input type="text" name="login">
+<br>
+Password:<br>
+<input type="password" name="password">
+<br>
+Repeat the Password:<br>
+<input type="password" name="passwordConfirm">
+<br><br><br>
+<input type="submit" value="Join me">
+</form>
+</div>
+<img id="trivialito2" src="@routes.Assets.at("images/trivialito2.svg")" alt="trivialito2"/>
+<img id="bocadillito" src="@routes.Assets.at("images/bocadillo.png")" alt="bocadillo">
+<p id="regP">Trivialito </br>must know</br> all about </br>YOU!</p>
+}

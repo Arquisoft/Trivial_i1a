@@ -6,10 +6,16 @@
 GET     /                           controllers.Application.login()
 GET     /hello                      controllers.Application.sayHi(age: Int, name:String) 
 GET     /hello/:name/:age           controllers.Application.sayHi(age: Int, name:String) 
-GET     /userMain          controllers.Application.validation(login:String, password:String)
-GET     /error             controllers.Application.error()
-GET     /game             controllers.Application.newGame()
-
+GET     /userMain                   controllers.Application.validation(login:String, password:String)
+GET     /userAdmin                   controllers.Application.validation(login:String, password:String)
+GET     /error                      controllers.Application.error()
+GET     /game/:login/:score         controllers.Application.showQuestionsgame(login:String,score:Int)
+GET     /how                        controllers.Application.howToPlay()
+GET     /register                   controllers.Application.register()
+GET     /showInfo/:login/:score     controllers.Application.showInfo(login:String,score:Int)
+GET     /winning/:login/:score      controllers.Application.winning(login:String,score:Int)
+GET     /users                      controllers.Application.showUsers()
+GET     /questions                  controllers.Application.showQuestions()
 
 
 # Map static resources from the /public folder to the /assets URL path

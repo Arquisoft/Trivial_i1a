@@ -1,0 +1,20 @@
+@(message: String, questions: List[Questions])
+
+@import helper._
+
+@main(message){
+<h1>List of questions</h1>
+<table>
+@for(question <- questions) {
+<tr>
+ <td>@question.title</td>
+ <td>@question.category</td>
+ @for( a <- 0 to 3){
+        <td>@question.answers.get(a)</td>
+      }
+ 
+</tr>
+}
+</table>
+}
+
